@@ -1,0 +1,102 @@
+body {
+    font-family: 'Cairo', 'Heebo', sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+h1, h2, h3, h4, h5, h6,
+body.home-2 h1, body.home-2 h2, body.home-2 h3, body.home-2 h4, body.home-2 h5, body.home-2 h6
+{
+    font-family: 'Cairo' , sans-serif;
+}
+.owl-carousel{
+    direction: ltr;
+}
+.owl-carousel .item{
+    direction: rtl;
+}
+.scroll-top {
+    right: auto;
+    left: 30px;
+}
+.fullscreen-banner .hero-bg img{
+    transform: rotateY(180deg);
+}
+.fullscreen-banner .round-shape {
+    right: auto;
+    left: 10%;
+}
+.title-effect {
+    left: auto;
+    right: 0;
+}
+.text-center .title-effect {
+    left: auto;
+    right: 50%;
+    margin-left: auto;
+    margin-right: -25px;
+}
+.section-title h6 {
+    padding: 15px 15px 15px 0;
+}
+.work-process .box-loader {
+    right: inherit;
+    left: -24%;
+}
+#clients.bg-effect::after {
+    left: 0;
+    right: 25%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 50%;
+}
+.ms-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+.me-2 {
+    margin-right: auto !important;
+    margin-left: .5rem !important;
+}
+#myAliceWebChat svg + span{
+    margin-left: 0 !important;
+    margin-right: 8px;
+}
+.scroll-top{
+    transform: rotateY(180deg) !important;
+}
+.page-title .page-title-pattern{
+    transform: rotateY(180deg);
+}
+.bg-effect::after {
+    left: 0;
+    right: 25%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 50%;
+}
+.bg-effect.right::after {
+    left: 25%;
+    right: 0;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 0;
+}
+.contact-1 .img-fluid{
+    transform: rotateY(180deg);
+}
+.custom-li li {
+    float: right;
+}
+.list-icon-2 li {
+    padding-left: 0;
+    padding-right: 20px;
+}
+.list-icon-2 li:before {
+    left: auto;
+    right: 0;
+}
+@media (max-width: 992px) {
+    .navbar-brand {
+        left: auto;
+        right: 0;
+        margin-right: auto;
+        margin-left: 0;
+    }
+}
