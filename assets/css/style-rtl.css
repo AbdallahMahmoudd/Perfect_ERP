@@ -92,6 +92,34 @@ body.home-2 h1, body.home-2 h2, body.home-2 h3, body.home-2 h4, body.home-2 h5, 
     left: auto;
     right: 0;
 }
+.testimonial.style-1 {
+    padding: 30px 30px 30px 0;
+}
+.testimonial.style-1:before {
+    background: var(--color-primary);
+    border-radius: 0 7px 7px 0;
+    left: auto;
+    right: 0;
+}
+.testimonial.style-1 .testimonial-content::before {
+    left: auto;
+    right: -25%;
+    transform: rotate(10deg);
+}
+.testimonial .testimonial-quote {
+    transform: rotate(90deg) rotateY(180deg);
+    right: auto;
+    left: 0;
+}
+.testimonial-caption:before {
+    background: var(--color-primary);
+    left: auto;
+    right: 0;
+}
+.testimonial-caption:after {
+    left: auto;
+    right: 110px;
+}
 @media (max-width: 992px) {
     .navbar-brand {
         left: auto;
