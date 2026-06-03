@@ -313,7 +313,7 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
   background: #fff;
   color: #02060b;
   font-size: 18px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 .footer-social ul li a:hover{
   color: #fff;
@@ -323,15 +323,20 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
   background: #1877F2 !important;
 }
 .footer-social ul li a.icon-instagram:hover{
-  background: linear-gradient(#feda75 , #fa7e1e, #d62976, #962fbf, #4f5bd5 ) !important;
+  background: radial-gradient(circle farthest-corner at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
 }
 .footer-social ul li a.icon-youtube:hover{
   background: #f00 !important;
 }
 .footer-social ul li a.icon-twitterX:hover{
-  background: #000 !important;
-  border: 1px solid #fff;
+  background: #15202B  !important;
 }
+.footer-social ul li a.icon-linkedin:hover{
+  background: #0A66C2  !important;
+}
+.footer-social ul li a.icon-tiktok:hover{
+  background-color: #010101;
+  box-shadow: -3px -3px 0px #25f4ee, 3px 3px 0px #fe2c55;}
 
 .theme-bg .primary-footer, .theme-bg .primary-footer a,
 .theme-bg .secondary-footer,
