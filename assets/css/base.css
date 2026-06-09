@@ -353,9 +353,6 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
 .footer-social ul li a.icon-google:hover{
   background-color: #dd4b39;
 }
-.footer-social ul li:nth-of-type(3){
-  display: none;
-}
 .theme-bg .primary-footer, .theme-bg .primary-footer a,
 .theme-bg .secondary-footer,
 .theme-bg .footer-list li a,
