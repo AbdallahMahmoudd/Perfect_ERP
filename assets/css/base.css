@@ -348,8 +348,14 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
 }
 .footer-social ul li a.icon-tiktok:hover{
   background-color: #010101;
-  box-shadow: -3px -3px 0px #25f4ee, 3px 3px 0px #fe2c55;}
-
+  box-shadow: -3px -3px 0 #25f4ee, 3px 3px 0 #fe2c55;
+}
+.footer-social ul li a.icon-google:hover{
+  background-color: #dd4b39;
+}
+.footer-social ul li:nth-of-type(3){
+  display: none;
+}
 .theme-bg .primary-footer, .theme-bg .primary-footer a,
 .theme-bg .secondary-footer,
 .theme-bg .footer-list li a,
