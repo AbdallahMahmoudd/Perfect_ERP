@@ -247,10 +247,10 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
 
 .navbar-nav .nav-link{color: var(--color-dark); font-weight: 500; padding: 0 !important; border-radius: 0; text-transform: capitalize; position: relative;}
 .custom-header .navbar-nav .nav-link{color: #fff !important;}
-.custom-header.fixed-header .navbar-nav .nav-link{color: var(--color-dark) }
+.fixed-header .navbar-nav .nav-link{color: var(--color-dark) !important;}
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-item .nav-link.active {color: var(--color-primary);}
-.navbar-nav .nav-link:hover,
+.custom-header .navbar-nav .nav-link:hover,
 .custom-header .navbar-nav .nav-item .nav-link.active {color: var(--bs-primary) !important;}
 .navbar-nav .nav-link::before {position: absolute; bottom: -15px; left: 50%; color: transparent; content: '.'; text-shadow: 0 0 transparent; font-size: 2em; -webkit-transition: text-shadow 0.3s, color 0.3s; -moz-transition: text-shadow 0.3s, color 0.3s; transition: text-shadow 0.3s, color 0.3s; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); transform: translateX(-50%); pointer-events: none; animation: opacitychange 1s ease-in-out infinite; line-height: 1;}
 .navbar-nav .nav-link:hover::before,
@@ -261,6 +261,10 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
 .custom-header .navbar-nav .nav-item .nav-link.show::before,
 .custom-header .navbar-nav .nav-item .nav-link.active::before,
 .custom-header .navbar-nav .nav-link:focus::before{color: #2575fc; text-shadow: 10px 0 #fff, -10px 0 #fff;}
+.custom-header .fixed-header .navbar-nav .nav-link:hover::before,
+.custom-header .fixed-header .navbar-nav .nav-item .nav-link.show::before,
+.custom-header .fixed-header .navbar-nav .nav-item .nav-link.active::before,
+.custom-header .fixed-header .navbar-nav .nav-link:focus::before{color: #2575fc; text-shadow: 10px 0 var(--color-dark), -10px 0 var(--color-dark);}
 .header-3 .navbar-nav .nav-link{color: #ffffff;}
 .header-3 .navbar-nav .nav-link:hover, .header-3 .navbar-nav .nav-item .nav-link.active {color: #ffffff;}
 .header-3 .navbar-nav .nav-link:hover::before,
