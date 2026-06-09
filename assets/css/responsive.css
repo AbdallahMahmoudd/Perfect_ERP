@@ -221,10 +221,23 @@ h3 {font-size: 22px; line-height: 30px;}
     font-size: 24px !important;
 }
 .owl-carousel .owl-nav button.owl-prev{
-    left: -8px;
+    left: 10px;
 }
 .owl-carousel .owl-nav button.owl-next {
-    right: -8px;
+    right: 10px;
+}
+.hero-wrapper .owl-nav{
+    display: none;
+}
+.testimonial.style-1 {
+    padding: 20px 20px 20px 0;
+}
+.testimonial.style-1 {
+    padding: 20px 20px 20px 0;
+}
+.testimonial-content p {
+    font-size: 14px;
+    line-height: 24px;
 }
 }
 
@@ -285,7 +298,6 @@ h4 {font-size: 18px; line-height: 26px;}
 
 /*Testimonial*/
 .testimonial.style-1 .testimonial-content{margin-right: 20px;}
-.testimonial-content p{font-size: 16px; line-height: 28px;}
 .testimonial.style-2 {padding: 20px 10px 70px;}
 .testimonial.style-2 .testimonial-img {width: 50%;}
 .testimonial-carousel.testimonial-2 .controls,

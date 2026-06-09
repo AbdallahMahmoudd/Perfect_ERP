@@ -117,7 +117,7 @@ $('.owl-carousel').each( function() {
       nav : $carousel.data("nav"),      
       autoplay : $carousel.data("autoplay"),
       autoplayTimeout : $carousel.data("autoplay-timeout"),
-      navText : [ '<span class="fas fa-long-arrow-alt-left"><span>', '<span class="fas fa-long-arrow-alt-right"></span>' ],
+      navText : [ '<span class="fas fa-angle-left"><span>', '<span class="fas fa-angle-right"></span>' ],
       responsive: {
         0:{items: $carousel.data('xs-items') ? $carousel.data('xs-items') : 1},
         576:{items: $carousel.data('sm-items')},
@@ -428,9 +428,12 @@ $window.resize(function() {
 
 
 $(window).on('load', function() {
-    preloader(),
+    preloader();
     wowanimation();
 });
-
+//
+if ($('.hero-wrapper').length > 0) {
+    $("header").addClass("custom-header")
+}
 // Year
 document.getElementById("year").innerHTML = (new Date).getFullYear()

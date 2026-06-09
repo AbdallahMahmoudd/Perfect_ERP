@@ -171,11 +171,11 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
 ------------------------*/
 .subscribe-form {margin: 0; padding: 0; position: relative;}
 #mc-form {width: 100%;}
-#mc-form input[type="email"] {width: 100%; border: none; background: #ffffff; border-radius: 7px; color: #1c1d3e; font-size: 14px; padding: 0 20px; height: 60px;}
-#mc-form input[type="email"]::-webkit-input-placeholder {color: #1c1d3e;}
-#mc-form input[type="email"]::-moz-placeholder {color: #1c1d3e;}
-#mc-form input[type="email"]:-ms-input-placeholder {color: #1c1d3e;}
-#mc-form input[type="email"].placeholder {color: #1c1d3e !important;}
+#mc-form input[type="email"] {width: 100%; border: none; background: #ffffff; border-radius: 7px; color: var(--color-dark); font-size: 14px; padding: 0 20px; height: 60px;}
+#mc-form input[type="email"]::-webkit-input-placeholder {color: var(--color-dark);}
+#mc-form input[type="email"]::-moz-placeholder {color: var(--color-dark);}
+#mc-form input[type="email"]:-ms-input-placeholder {color: var(--color-dark);}
+#mc-form input[type="email"].placeholder {color: var(--color-dark) !important;}
 #mc-form .btn {position: absolute; border-radius: 0px; top: 5px; right: 5px; padding: 0 25px; transition: 0.20s; height: 50px; border-radius: 7px;}
 #mc-form .btn:hover{transform: translateX(-3px);}
 .footer-1 .subscribe-box{position: absolute; top: 0; width: 100%;}
@@ -214,7 +214,7 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
 .navbar-nav .nav-item.dropdown .dropdown-menu { padding: 10px; background: #ffffff; top: 100%; border: none; margin-top: 0; left: 0;}
 .navbar-brand {margin-right: 0;}
 .nav-item.dropdown .dropdown-menu li:last-child{margin-bottom: 0;}
-.nav-item.dropdown .dropdown-menu a {display: block; padding: 10px 20px; white-space: nowrap; position: relative; background: none; color: #1c1d3e; font-size: 14px; font-weight: 400;}
+.nav-item.dropdown .dropdown-menu a {display: block; padding: 10px 20px; white-space: nowrap; position: relative; background: none; color: var(--color-dark); font-size: 14px; font-weight: 400;}
 .nav-item.dropdown .dropdown-menu a:hover{color: #2575fc; padding-left: 35px;}
 .navbar-nav .dropdown-menu .dropdown-submenu .dropdown-toggle.show,
 .navbar-nav .dropdown-menu .dropdown-submenu .dropdown-toggle:focus{color: #2575fc; padding-left: 35px;}
@@ -222,7 +222,7 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
 
 .nav-item.dropdown .dropdown-menu a::before {position: absolute; top: 0; left: 10px; color: transparent; content: '.'; text-shadow: 0 0 transparent; font-size: 2em; line-height: 1em; -webkit-transition: text-shadow 0.3s, color 0.3s; -moz-transition: text-shadow 0.3s, color 0.3s; transition: text-shadow 0.3s, color 0.3s; pointer-events: none; animation: opacitychange 1s ease-in-out infinite;}
 .nav-item.dropdown .dropdown-menu a:hover::before,
-.nav-item.dropdown .dropdown-menu a:focus::before {color: #2575fc; text-shadow: 10px 0 #1c1d3e, -10px 0 #1c1d3e;}
+.nav-item.dropdown .dropdown-menu a:focus::before {color: #2575fc; text-shadow: 10px 0 var(--color-dark), -10px 0 var(--color-dark);}
 .nav-link.dropdown-toggle::after,
 .navbar-nav .dropdown-submenu .dropdown-toggle::after {border: none; content: '+'; vertical-align: middle; width: 10px;}
 .nav-link.dropdown-toggle:hover::after,
@@ -245,21 +245,29 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
 .navbar-nav .dropdown-menu .dropdown-submenu .dropdown-menu {background: #ffffff; left: 100%; margin: 0; right: auto; top: 0; }
 .navbar-nav .dropdown-submenu { display: block; position: relative; }
 
-.navbar-nav .nav-link{color: #1c1d3e; font-weight: 500; padding: 0 !important; border-radius: 0; text-transform: capitalize; position: relative;}
-.navbar-nav .nav-link:hover, .navbar-nav .nav-item .nav-link.active {color: #2575fc;}
+.navbar-nav .nav-link{color: var(--color-dark); font-weight: 500; padding: 0 !important; border-radius: 0; text-transform: capitalize; position: relative;}
+.custom-header .navbar-nav .nav-link{color: #fff !important;}
+.custom-header.fixed-header .navbar-nav .nav-link{color: var(--color-dark) }
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active {color: var(--color-primary);}
+.navbar-nav .nav-link:hover,
+.custom-header .navbar-nav .nav-item .nav-link.active {color: var(--bs-primary) !important;}
 .navbar-nav .nav-link::before {position: absolute; bottom: -15px; left: 50%; color: transparent; content: '.'; text-shadow: 0 0 transparent; font-size: 2em; -webkit-transition: text-shadow 0.3s, color 0.3s; -moz-transition: text-shadow 0.3s, color 0.3s; transition: text-shadow 0.3s, color 0.3s; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); transform: translateX(-50%); pointer-events: none; animation: opacitychange 1s ease-in-out infinite; line-height: 1;}
 .navbar-nav .nav-link:hover::before,
 .navbar-nav .nav-item .nav-link.show::before,
 .navbar-nav .nav-item .nav-link.active::before,
-.navbar-nav .nav-link:focus::before {color: #2575fc; text-shadow: 10px 0 #1c1d3e, -10px 0 #1c1d3e;}
-
+.navbar-nav .nav-link:focus::before {color: #2575fc; text-shadow: 10px 0 var(--color-dark), -10px 0 var(--color-dark);}
+.custom-header .navbar-nav .nav-link:hover::before,
+.custom-header .navbar-nav .nav-item .nav-link.show::before,
+.custom-header .navbar-nav .nav-item .nav-link.active::before,
+.custom-header .navbar-nav .nav-link:focus::before{color: #2575fc; text-shadow: 10px 0 #fff, -10px 0 #fff;}
 .header-3 .navbar-nav .nav-link{color: #ffffff;}
 .header-3 .navbar-nav .nav-link:hover, .header-3 .navbar-nav .nav-item .nav-link.active {color: #ffffff;}
 .header-3 .navbar-nav .nav-link:hover::before,
 .header-3 .navbar-nav .nav-item .nav-link.active::before,
 .header-3 .navbar-nav .nav-link:focus::before {color: #ffffff;}
 
-.header-3 #header-wrap.fixed-header .navbar-nav .nav-link{color: #1c1d3e}
+.header-3 #header-wrap.fixed-header .navbar-nav .nav-link{color: var(--color-dark)}
 .header-3 #header-wrap.fixed-header .navbar-nav .nav-link:hover, .header-3 #header-wrap.fixed-header .navbar-nav .nav-item .nav-link.active{color: #2575fc}
 .header-3 #header-wrap.fixed-header .navbar-nav .nav-link:hover::before,
 .header-3 #header-wrap.fixed-header .navbar-nav .nav-link.active::before{color: #2575fc;}
@@ -283,7 +291,7 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
 .copyright span a{font-weight: bold;}
 .theme-bg .copyright{border-top: 2px solid rgba(255,255,255,0.030); padding-top: 50px;}
 .footer-logo img{height: 70px;}
-.primary-footer, .primary-footer a{color: #1c1d3e;}
+.primary-footer, .primary-footer a{color: var(--color-dark);}
 .primary-footer h4{margin-bottom: 20px;}
 .footer-1{margin-top: 100px; padding-top: 150px;}
 .footer-2{padding-top: 250px;}
@@ -297,7 +305,7 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
 
 .footer-list li{margin-bottom: 15px; text-transform: capitalize;}
 .footer-list li:last-child{margin-bottom: 0;}
-.footer-list li a{position: relative; font-size: 16px; font-weight: 400; color: #1c1d3e}
+.footer-list li a{position: relative; font-size: 16px; font-weight: 400; color: var(--color-dark)}
 .footer-list .list-inline li{display: inline-block; margin: 0 10px;}
 
 .footer-logo{margin-bottom: 15px;}
@@ -358,11 +366,11 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
     Page Title
 ------------------------*/
 .page-title {display: block; padding: 200px 0 250px; z-index: 1}
-.page-title h1{font-size: 50px; color: #1c1d3e; line-height: 60px; font-weight: 700; margin-bottom: 20px;}
-.page-title p{margin-bottom: 0; color: #1c1d3e;}
-.breadcrumb {padding: 0; background:none; display: inline-block; border-radius: 0; margin: 0; text-transform: capitalize; color: #1c1d3e; font-weight: 700;}
+.page-title h1{font-size: 50px; color: var(--color-dark); line-height: 60px; font-weight: 700; margin-bottom: 20px;}
+.page-title p{margin-bottom: 0; color: var(--color-dark);}
+.breadcrumb {padding: 0; background:none; display: inline-block; border-radius: 0; margin: 0; text-transform: capitalize; color: var(--color-dark); font-weight: 700;}
 .breadcrumb-item{display: inline-block;}
-.breadcrumb-item a{color: #1c1d3e}
+.breadcrumb-item a{color: var(--color-dark)}
 .breadcrumb-item.active, .breadcrumb-item a:hover{color: #2575fc;}
 .page-title-pattern {bottom: 0; position: absolute; z-index: -1}
 

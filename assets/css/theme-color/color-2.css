@@ -136,7 +136,7 @@ h2 span,
 ------------------------*/
 .btn.btn-theme,
 .owl-carousel .owl-nav button.owl-prev:hover,
-.owl-carousel .owl-nav button.owl-next:hover{background: rgb(58, 48, 196); background: linear-gradient(90deg, rgb(58, 48, 196) 0%, #3a30c4 80%);  color: #ffffff;}
+.owl-carousel .owl-nav button.owl-next:hover{background: var(--bs-primary); background: linear-gradient(90deg, rgb(58, 48, 196) 0%, #3a30c4 80%);  color: #ffffff;}
 [data-overlay].grediant-overlay:before{background: #3a30c4; background: linear-gradient(90deg, rgba(0,201,255,1) 0%, #3a30c4 80%);}
 .featured-item::before {background: #3a30c4; background: linear-gradient(180deg, rgba(0,201,255,1) 0%, #3a30c4 80%);}
 .grediant-bg{background: #3a30c4; background: linear-gradient(90deg, rgba(0,201,255,1) 0%, #3a30c4 80%);}
