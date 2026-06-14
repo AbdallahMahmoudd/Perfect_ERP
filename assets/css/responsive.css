@@ -146,7 +146,9 @@ h6 {font-size: 17px; line-height: 26px;}
 .error-page > span:nth-of-type(2) {width: 180px; height: 90px;}
 .owl-carousel.owl-nav2 .owl-nav {left: inherit; bottom: inherit; position: inherit; width: 100%; text-align: center; margin-top: 30px;}
 #svg-container {width: 100%; transform: rotate(90deg); left: 0; top: 50%;}
-
+.custom-header .navbar-nav .nav-link {
+    color: var(--color-dark) !important;
+}
 }
 
 @media (max-width: 767px){
@@ -238,6 +240,9 @@ h3 {font-size: 22px; line-height: 30px;}
 .testimonial-content p {
     font-size: 14px;
     line-height: 24px;
+}
+.btn:before{
+    display: none;
 }
 }
 
