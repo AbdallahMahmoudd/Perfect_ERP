@@ -127,4 +127,7 @@ body.home-2 h1, body.home-2 h2, body.home-2 h3, body.home-2 h4, body.home-2 h5, 
         margin-right: auto;
         margin-left: 0;
     }
+    .btn:before{
+        display: none;
+    }
 }
