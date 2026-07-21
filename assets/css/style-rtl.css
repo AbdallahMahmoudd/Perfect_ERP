@@ -120,6 +120,18 @@ body.home-2 h1, body.home-2 h2, body.home-2 h3, body.home-2 h4, body.home-2 h5, 
     left: auto;
     right: 110px;
 }
+.nav-link.dropdown-toggle::after,
+.navbar-nav .dropdown-submenu .dropdown-toggle::after {
+    content: "\f104";
+}
+.nav-item.dropdown .dropdown-menu a:hover {
+    padding-left: 0;
+    padding-right: 35px;
+}
+.nav-item.dropdown .dropdown-menu a::before {
+    left: auto;
+    right: 10px;
+}
 @media (max-width: 992px) {
     .navbar-brand {
         left: auto;

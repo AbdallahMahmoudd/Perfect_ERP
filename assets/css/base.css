@@ -224,13 +224,22 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
 .nav-item.dropdown .dropdown-menu a:hover::before,
 .nav-item.dropdown .dropdown-menu a:focus::before {color: #2575fc; text-shadow: 10px 0 var(--color-dark), -10px 0 var(--color-dark);}
 .nav-link.dropdown-toggle::after,
-.navbar-nav .dropdown-submenu .dropdown-toggle::after {border: none; content: '+'; vertical-align: middle; width: 10px;}
+.navbar-nav .dropdown-submenu .dropdown-toggle::after {
+  border: none; vertical-align: middle; width: 10px;
+  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  font-weight: var(--fa-style, 900);
+  content: "\f105";
+}
 .nav-link.dropdown-toggle:hover::after,
-.navbar-nav .dropdown-submenu .dropdown-toggle:hover::after {content: '-';}
+.navbar-nav .dropdown-submenu .dropdown-toggle:hover::after {
+  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  font-weight: var(--fa-style, 900);
+  content: "\f107";
+}
 
 
 @media (min-width:992px) {
-  .navbar-nav .dropdown-menu { min-width: 12em !important; max-width: 20em !important; }
+  .navbar-nav .dropdown-menu { min-width: 15em !important; max-width: 20em !important; }
   .navbar-nav .dropdown > .dropdown-menu { opacity: 0; position: absolute; display: block; pointer-events: none; background: #ffffff; }
   .navbar-nav .dropdown:hover > .dropdown-menu { display: block; opacity: 1; pointer-events: auto; visibility: visible; -webkit-transition: all 0.5s ease-in-out 0s; -moz-transition: all 0.5s ease-in-out 0s; -ms-transition: all 0.5s ease-in-out 0s; -o-transition: all 0.5s ease-in-out 0s; transition: all 0.5s ease-in-out 0s; }
   .navbar-nav .dropdown-submenu:hover .dropdown-menu { top: 0; }
