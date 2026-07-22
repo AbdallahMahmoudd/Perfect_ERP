@@ -719,3 +719,17 @@
     height: 80px;
     margin: 0 auto 10px;
 }
+.compatible-img{
+    display: block;
+    background: #fff;
+    width: 250px;
+    padding: 20px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+.compatible-img img{
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+}
