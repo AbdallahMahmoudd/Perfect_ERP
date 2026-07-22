@@ -216,21 +216,22 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
 .nav-item.dropdown .dropdown-menu li:last-child{margin-bottom: 0;}
 .nav-item.dropdown .dropdown-menu a {display: block; padding: 10px 20px; white-space: nowrap; position: relative; background: none; color: var(--color-dark); font-size: 14px; font-weight: 400;}
 .nav-item.dropdown .dropdown-menu a:hover{color: #2575fc; padding-left: 35px;}
-.navbar-nav .dropdown-menu .dropdown-submenu .dropdown-toggle.show,
-.navbar-nav .dropdown-menu .dropdown-submenu .dropdown-toggle:focus{color: #2575fc; padding-left: 35px;}
+/*.navbar-nav .dropdown-menu .dropdown-submenu .dropdown-toggle.show,*/
+/*.navbar-nav .dropdown-menu .dropdown-submenu .dropdown-toggle:focus{color: #2575fc; padding-left: 35px;}*/
 
 
 .nav-item.dropdown .dropdown-menu a::before {position: absolute; top: 0; left: 10px; color: transparent; content: '.'; text-shadow: 0 0 transparent; font-size: 2em; line-height: 1em; -webkit-transition: text-shadow 0.3s, color 0.3s; -moz-transition: text-shadow 0.3s, color 0.3s; transition: text-shadow 0.3s, color 0.3s; pointer-events: none; animation: opacitychange 1s ease-in-out infinite;}
 .nav-item.dropdown .dropdown-menu a:hover::before,
 .nav-item.dropdown .dropdown-menu a:focus::before {color: #2575fc; text-shadow: 10px 0 var(--color-dark), -10px 0 var(--color-dark);}
-.nav-link.dropdown-toggle::after,
+.nav-item.dropdown>.nav-link::after,
 .navbar-nav .dropdown-submenu .dropdown-toggle::after {
   border: none; vertical-align: middle; width: 10px;
   font-family: var(--fa-style-family, "Font Awesome 6 Free");
   font-weight: var(--fa-style, 900);
   content: "\f105";
+  margin-inline-start: 4px;
 }
-.nav-link.dropdown-toggle:hover::after,
+.nav-item.dropdown>.nav-link:hover::after,
 .navbar-nav .dropdown-submenu .dropdown-toggle:hover::after {
   font-family: var(--fa-style-family, "Font Awesome 6 Free");
   font-weight: var(--fa-style, 900);

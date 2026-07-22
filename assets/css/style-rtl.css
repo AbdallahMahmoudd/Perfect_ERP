@@ -120,8 +120,7 @@ body.home-2 h1, body.home-2 h2, body.home-2 h3, body.home-2 h4, body.home-2 h5, 
     left: auto;
     right: 110px;
 }
-.nav-link.dropdown-toggle::after,
-.navbar-nav .dropdown-submenu .dropdown-toggle::after {
+.nav-item.dropdown>.nav-link::after {
     content: "\f104";
 }
 .nav-item.dropdown .dropdown-menu a:hover {
