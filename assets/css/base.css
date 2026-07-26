@@ -237,7 +237,9 @@ a, i, .btn, .btn span, button, img, span, .nav-link, .dropdown-item, .social-ico
   font-weight: var(--fa-style, 900);
   content: "\f107";
 }
-
+.nav-item .btn{
+  border-radius: 25px;
+}
 
 @media (min-width:992px) {
   .navbar-nav .dropdown-menu { min-width: 15em !important; max-width: 20em !important; }
