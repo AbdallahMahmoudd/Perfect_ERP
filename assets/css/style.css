@@ -179,9 +179,15 @@ section{padding: 80px 0;}
 .dark-bg .form-control, .theme-bg .form-control{color: #ffffff;}
 .grey-bg .form-control{background: #ffffff}
 textarea.form-control{height: 150px; border-radius: 5px;}
-.form-control:focus{box-shadow: none; background: none; border-color: var(--color-primary);}
+.form-control:focus{box-shadow: none; background: #f8f8f8; border-color: var(--color-primary);}
 .theme-bg .form-control:focus{border-color: var(--color-primary);}
-select.form-control {-moz-appearance: none; -webkit-appearance: none; appearance: none; height: 50px !important;}
+select.form-control {
+ height: 50px !important;
+ background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/></svg>') !important;
+ background-repeat: no-repeat !important;
+ background-position: right 10px center !important;
+ background-size: 20px !important;
+}
 iframe{width: 100%; border: none; pointer-events: auto;}
 .iframe-h{height: 500px !important;}
 .iframe-h-2{height: 600px !important;}

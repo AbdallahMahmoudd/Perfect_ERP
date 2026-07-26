@@ -131,6 +131,12 @@ body.home-2 h1, body.home-2 h2, body.home-2 h3, body.home-2 h4, body.home-2 h5, 
     left: auto;
     right: 10px;
 }
+select.form-control {
+    background-position: left 10px center !important;
+}
+[type=email], [type=number], [type=tel], [type=url] {
+     direction: rtl;
+}
 @media (max-width: 992px) {
     .navbar-brand {
         left: auto;
