@@ -137,6 +137,19 @@ select.form-control {
 [type=email], [type=number], [type=tel], [type=url] {
      direction: rtl;
 }
+.price-value h2 span {inset-inline-start: -42px;}
+.accordion .accordion-button {
+    border: none;
+    padding: 10px 20px 10px 40px;
+}
+.accordion .accordion-button:before, .accordion .accordion-button:after {
+    right: auto;
+    left: 30px;
+}
+.accordion-button::after {
+    margin-right: 0;
+    margin-left: auto;
+}
 @media (max-width: 992px) {
     .navbar-brand {
         left: auto;

@@ -22,11 +22,11 @@
 /* ------------------------
     Accordion
 ------------------------*/
-.accordion .accordion-button{border: none; padding: 10px 30px 10px 20px; border-radius: 7px !important; background: #ffffff; font-weight: 600; font-size: 15px; color: var(--color-dark); text-transform: capitalize; display: inline-block; width: 100%;}
+.accordion .accordion-button{border: none; padding: 10px 40px 10px 20px; border-radius: 7px !important; background: #ffffff; font-weight: 600; font-size: 15px; color: var(--color-dark); text-transform: capitalize; display: inline-block; width: 100%;}
 .accordion-button:hover, .accordion-button:not(.collapsed){background: #2575fc; color: #ffffff}
 .accordion .accordion-body {padding: 30px;}
 .accordion .accordion-button:before,
-.accordion .accordion-button:after {content: ''; position: absolute; width: 20px; height: 2px; background: #2575fc; top: 50%; right: 20px; -webkit-transform: translate(-50%); transform: translate(-50%)}
+.accordion .accordion-button:after {content: ''; position: absolute; width: 20px; height: 2px; background: #2575fc; top: 50%; right: 30px; -webkit-transform: translate(-50%); transform: translate(-50%)}
 .accordion .accordion-button:before {-webkit-transform: translate(-50%) rotate(90deg); transform: translate(-50%) rotate(90deg)}
 .accordion .accordion-button[aria-expanded="true"]:before,
 .accordion-button:hover:before {-webkit-transform: translate(-50%) rotate(0deg); transform: translate(-50%) rotate(0deg)}
@@ -577,7 +577,7 @@
 .price-header{position: relative; z-index: 9;}
 .price-value {display: inline-block; width: 100%;}
 .price-value h2 {font-size: 54px; line-height: 54px; font-weight: 800; color: var(--color-primary); margin-bottom: 0; position: relative; display: inline-block;}
-.price-value h2 span {display: inline-block; font-size: 22px; line-height: 20px; margin: 0; color: #5f5f5f; font-weight: normal;}
+.price-value h2 span {display: inline-block; font-size: 22px; line-height: 20px; margin: 0; color: #5f5f5f; font-weight: normal;position: absolute;bottom: 8px; inset-inline-start: -52px;}
 .price-value span {margin: 15px 0; display: block;}
 .price-list ul li {position: relative; display: block; margin-bottom: 20px; font-size: 13px}
 .price-list ul li:last-child{margin-bottom: 0;}
@@ -607,6 +607,21 @@
 .price-table.style-4 .price-list{margin: 25px 0;}
 .price-table.style-4 h3{text-transform: capitalize;}
 
+.price-table ul li{
+    position: relative;
+    text-align: start;
+    padding-inline-start: 20px;
+}
+.price-table ul li:before{
+    content: var(--fa);
+    --fa: "\f14a";
+    font-family: var(--fa-style-family, "Font Awesome 6 Free");
+    font-weight: var(--fa-style, 900);
+    color: var(--color-primary);
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+}
 
 /* ------------------------
     Section Title
