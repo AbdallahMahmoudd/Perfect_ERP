@@ -373,17 +373,21 @@ function search() {
 /*------------------------------------
   HT Countdown
 --------------------------------------*/
-function countdown() {
-  $('.countdown').each(function () {
-    var $this = $(this),
-      finalDate = $(this).data('countdown');
-    $this.countdown(finalDate, function (event) {
-      $(this).html(event.strftime('<li><span>%-D</span><p>Days</p></li>' + '<li><span>%-H</span><p>Hours</p></li>' + '<li><span>%-M</span><p>Minutes</p></li>' + '<li><span>%S</span><p>Seconds</p></li>'));
+function startCountdown() {
+    // 7 days from now
+    let finalDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+
+    $('.countdown').countdown(finalDate, function (event) {
+        $(this).find('.days').text(event.strftime('%-D'));
+        $(this).find('.hours').text(event.strftime('%H'));
+        $(this).find('.minutes').text(event.strftime('%M'));
+        $(this).find('.seconds').text(event.strftime('%S'));
+    }).on('finish.countdown', function () {
+        // Restart automatically for another 3 days
+        $(this).countdown('remove');
+        startCountdown();
     });
-  });
-};
-
-
+}
 
 /*------------------------------------
   HT Wow Animation
@@ -418,7 +422,8 @@ $(document).ready(function() {
     contactform(),
     progressbar(),
     search(),
-    countdown();
+    startCountdown();
+
 });
 
 

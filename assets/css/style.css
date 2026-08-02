@@ -131,12 +131,14 @@ section{padding: 80px 0;}
 /* ------------------------
     Countdown
 ------------------------*/
-.countdown{margin:50px 0; padding:50px 0; display: table; width: 100%; border-top: 2px dashed rgba(255,255,255,0.5); border-bottom: 2px dashed rgba(255,255,255,0.5);}
-.countdown > li{font-weight: 700; text-align: center; list-style-type: none; display: table-cell; width: auto;}
-.countdown > li span{font-size:70px; font-weight:700; line-height:60px; display: inline-block;}
-.countdown > li p{font-size:20px; display: inline-block; line-height:30px; margin-bottom: 0; color: var(--color-dark);}
+.countdown{margin:50px 0; display: flex; align-items: center; justify-content: center;gap: 20px; width: 100%; border-top: 2px dashed rgba(255,255,255,0.5); border-bottom: 2px dashed rgba(255,255,255,0.5);}
+.countdown > li{font-weight: 700; text-align: center; list-style-type: none; display: inline-block; width: 130px;padding: 20px; background: var(--color-primary)}
+.countdown > li span{font-size:60px; font-weight:700; line-height:60px; display: block;color: #fff}
+.countdown > li p{font-size:16px; display: block; line-height:24px; margin-bottom: 0; color: #fff}
 .coming-soon .subscribe-form{margin: 0 auto;}
-
+.coming-soon{
+ margin: 50px auto;
+}
 
 /* ------------------------
     Terms and Conditions
