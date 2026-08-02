@@ -74,29 +74,31 @@ h6 {font-size: 17px; line-height: 26px;}
 .navbar-brand {left: 0; margin-right: 0; position: absolute; top: 50%; padding: 0; transform: translateY(-50%); -webkit-transform: translateY(-50%); -o-transform: translateY(-50%); -ms-transform: translateY(-50%); -moz-transform: translateY(-50%);}
 .navbar-toggler {background: none; height: 40px; width: 40px; padding: 0; border-radius: 0; margin-right: 15px;}
 .navbar-toggler:focus {box-shadow: none;}
-.navbar-nav .nav-item{margin: 0;}
+.navbar-nav .nav-item{margin: 0; width: 100%}
 .navbar-nav .nav-link{padding: 10px !important; font-size: 15px; border-radius: 0;}
 .navbar-nav .nav-link:hover, .navbar-nav .nav-item .nav-link.active{padding-left: 35px !important;}
-.navbar-nav .nav-link::before {bottom: inherit; top: 0; left: 10px; transform: inherit;}
+.navbar-nav .nav-link::before {bottom: inherit; top: 0; left: 10px; transform: inherit; display: none}
 .navbar-nav .nav-link:hover::before,
-.navbar-nav .nav-link:focus::before {color: #2575fc; text-shadow: 10px 0 #1c1d3e, -10px 0 #1c1d3e;}
+.navbar-nav .nav-link:focus::before {color: var(--color-primary); text-shadow: 10px 0 #1c1d3e, -10px 0 #1c1d3e;}
 .navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus, .navbar-nav .nav-link.active,
 .nav-item .nav-link.show{padding-left: 35px !important;}
 
 .header-3 .navbar-nav .nav-link{color: #1c1d3e}
-.header-3 .navbar-nav .nav-link:hover, .header-3 .navbar-nav .nav-item .nav-link.active{color: #2575fc}
-.header-3 .navbar-nav .nav-link:hover::before, .header-3 .navbar-nav .nav-item .nav-link.active::before, .header-3 .navbar-nav .nav-link:focus::before{color: #2575fc}
+.header-3 .navbar-nav .nav-link:hover, .header-3 .navbar-nav .nav-item .nav-link.active{color: var(--color-primary)}
+.header-3 .navbar-nav .nav-link:hover::before, .header-3 .navbar-nav .nav-item .nav-link.active::before, .header-3 .navbar-nav .nav-link:focus::before{color: var(--color-primary)}
 
 .navbar-collapse {background:#ffffff; max-height: 400px; overflow: auto; border: medium none; -webkit-box-shadow: 7px 5px 30px rgba(72,73,121,0.15); -moz-box-shadow: 7px 5px 30px rgba(72,73,121,0.15); box-shadow: 7px 5px 30px rgba(72,73,121,0.15); left: 0; padding: 10px; position: absolute; z-index: 99; top: 40px; width: 100%;}
 
-.navbar-toggler span {width: 80%; height: 2px; margin: 0 auto; display: block; background: #2575fc; transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375); transition-delay: 0.2s;}
+.navbar-toggler span {width: 80%; height: 2px; margin: 0 auto; display: block; background: var(--color-primary); transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375); transition-delay: 0.2s;}
+.custom-header .navbar-toggler span {background: #fff}
+.custom-header .fixed-header .navbar-toggler span {background: var(--color-primary);}
 .navbar-toggler span:first-of-type {transform: rotate(45deg) translate(2px, 2px);}
 .navbar-toggler span:nth-of-type(2) {opacity: 0;}
 .navbar-toggler span:last-of-type {transform: rotate(-45deg) translate(1px, -1px);}
 .navbar-toggler[aria-expanded="false"] span {transform: none; opacity: 1; margin: 5px auto;}
 .navbar-toggler span{margin: 0 auto}
 .header-3 .navbar-toggler span{background: #ffffff; -webkit-transition: all 0.1s ease-in-out 0s; -moz-transition: all 0.1s ease-in-out 0s; -ms-transition: all 0.1s ease-in-out 0s; -o-transition: all 0.1s ease-in-out 0s; transition: all 0.1s ease-in-out 0s;}
-.header-3 #header-wrap.fixed-header .navbar-toggler span {background: #2575fc;}
+.header-3 #header-wrap.fixed-header .navbar-toggler span {background: var(--color-primary);}
 
 /*Banner*/
 .fullscreen-banner{height: auto !important; padding: 150px 0 100px !important; min-height: inherit;}
@@ -159,7 +161,9 @@ h6 {font-size: 17px; line-height: 26px;}
         border: none;
     }
     .header a.btn{margin: 20px auto;}
-
+    .btn span {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 767px){
@@ -260,6 +264,35 @@ h3 {font-size: 22px; line-height: 30px;}
     }
     .custom-li li {
         font-size: 14px;
+    }
+    .clients-logo {
+        padding: 15px;
+        width: 250px;
+        height: 150px;
+        margin: 0 auto;
+    }
+    .team-member {
+        width: 250px;
+        margin: 15px auto !important;
+    }
+    .team-images {
+        height: 350px;
+    }
+    .counter {
+        width: 250px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    .counter-icon img{
+        max-height: 80px;
+    }
+    .counter span {
+        font-size: 30px;
+        line-height: 30px;
+        margin: 20px 0 10px;
+    }
+    .counter h5 {
+        font-size: 16px;
     }
 }
 

@@ -1,7 +1,7 @@
 /* ------------------------
     Table of Contents
 
-  1. Predefined Variables
+  1. Predefined variables
   2. Preloader  
   3. FullScreen
   4. Counter
@@ -25,11 +25,9 @@
 "use strict";
 
 /*------------------------------------
-  HT Predefined Variables
+  HT Predefined variables
 --------------------------------------*/
-var $window = $(window),
-    $document = $(document),
-    $body = $('body'),
+const $window = $(window),
     $fullScreen = $('.fullscreen-banner') || $('.section-fullscreen'),
     $halfScreen = $('.halfscreen-banner'),
     searchActive = false;
@@ -45,7 +43,7 @@ $.fn.exists = function () {
 --------------------------------------*/
 function preloader() {
    $('#ht-preloader').fadeOut();
-};
+}
 
 
 /*------------------------------------
@@ -54,7 +52,7 @@ function preloader() {
 function fullScreen() {
     if ($fullScreen.exists()) {
         $fullScreen.each(function () {
-        var $elem = $(this),
+        const $elem = $(this),
         elemHeight = $window.height();
         if($window.width() < 768 ) $elem.css('height', elemHeight/ 1);
         else $elem.css('height', elemHeight);
@@ -62,32 +60,32 @@ function fullScreen() {
         }
         if ($halfScreen.exists()) {
         $halfScreen.each(function () {
-        var $elem = $(this),
+        const $elem = $(this),
         elemHeight = $window.height();
         $elem.css('height', elemHeight / 2);
         });
     }
-};
+}
 
 
 /*------------------------------------
   HT menu
 --------------------------------------*/
 function menu() {  
- $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+ $('.dropdown-menu a.dropdown-toggle').on('click', function() {
   if (!$(this).next().hasClass('show')) {
     $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
   }
-  var $subMenu = $(this).next(".dropdown-menu");
+  const $subMenu = $(this).next(".dropdown-menu");
   $subMenu.toggleClass('show');
 
-  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function() {
     $('.dropdown-submenu .show').removeClass("show");
   });
 
   return false;
 });
-};
+}
 
 
 
@@ -98,7 +96,7 @@ function counter() {
   $('.count-number').countTo({
     refreshInterval: 2
   });   
-};
+}
 
 
 /*------------------------------------
@@ -106,7 +104,7 @@ function counter() {
 --------------------------------------*/
 function owlcarousel() {
 $('.owl-carousel').each( function() {
-  var $carousel = $(this);
+  const $carousel = $(this);
   $carousel.owlCarousel({
       items : $carousel.data("items"),
       slideBy : $carousel.data("slideby"),
@@ -127,7 +125,7 @@ $('.owl-carousel').each( function() {
       },
   });
 });
-};
+}
 
 
 /*------------------------------------
@@ -138,48 +136,13 @@ function testimonialcarousel() {
       $('.testimonial-carousel .controls li.active').removeClass('active');
       $('.testimonial-carousel .controls li:eq('+$(evt.relatedTarget).index()+')').addClass('active');
     })
-};
-
-
-/*------------------------------------
-  HT Magnific Popup
---------------------------------------*/
-function magnificpopup() {
-$('.popup-gallery').magnificPopup({
-    delegate: 'a.popup-img',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function(item) {
-        return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-      }
-    }
-  });
-if ($(".popup-youtube, .popup-vimeo, .popup-gmaps").exists()) {
-     $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-          disableOn: 700,
-          type: 'iframe',
-          mainClass: 'mfp-fade',
-          removalDelay: 160,
-          preloader: false,
-          fixedContentPos: false
-    });
-  }
-
-};     
+}
 
 /*------------------------------------
   HT Scroll to top
 --------------------------------------*/
 function scrolltop() {
-  var pxShow = 300,
+  const pxShow = 300,
     goTopButton = $(".scroll-top")
     // Show or hide the button
   if ($(window).scrollTop() >= pxShow) goTopButton.addClass('scroll-visible');
@@ -190,13 +153,13 @@ function scrolltop() {
       goTopButton.removeClass('scroll-visible')
     }
   });
-  $('.smoothscroll').on('click', function (e) {
+  $('.smoothscroll').on('click', function () {
     $('body,html').animate({
       scrollTop: 0
     }, 1000);
     return false;
   });
-};
+}
 
 
  /*------------------------------------
@@ -204,11 +167,11 @@ function scrolltop() {
 --------------------------------------*/
 function headerheight() {
   $('.fullscreen-banner .align-center, .nav-arrows span').each(function(){
-    var headerHeight=$('.header').height();
+    const headerHeight=$('.header').height();
     // headerHeight+=15; // maybe add an offset too?
     $(this).css('padding-top',headerHeight+'px');
   });
-};
+}
 
 
 /*------------------------------------
@@ -222,7 +185,7 @@ function fxheader() {
       $('#header-wrap').removeClass('fixed-header');
     }
   });
-};
+}
 
 /*------------------------------------
   HT Scrolling Animation
@@ -230,7 +193,7 @@ function fxheader() {
 function scrolling() {
   $('.nav-item a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])').on('click', function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
+      let target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
         $('html,body').animate({
@@ -244,7 +207,7 @@ function scrolling() {
   $('.nav-item a[href*="#"]:not([href="#"])').on('click', function () {
     $('.navbar-collapse').collapse('hide');
   });       
-};
+}
 
 
 /*------------------------------------------
@@ -260,7 +223,7 @@ function databgcolor() {
     $('[data-bg-img]').each(function() {
      $(this).css('background-image', 'url(' + $(this).data("bg-img") + ')');
     });
-};
+}
 
 
 /*------------------------------------
@@ -274,7 +237,7 @@ function contactform() {
 
     // if the validator does not prevent form submit
     if (!e.isDefaultPrevented()) {
-        var url = "php/contact.php";
+        const url = "php/contact.php";
 
         // POST values in the background the the script URL
         $.ajax({
@@ -286,11 +249,11 @@ function contactform() {
             // data = JSON object that contact.php returns
 
             // we recieve the type of the message: success x danger and apply it to the 
-            var messageAlert = 'alert-' + data.type;
-            var messageText = data.message;
+            const messageAlert = 'alert-' + data.type;
+            const messageText = data.message;
 
             // let's compose Bootstrap alert box HTML
-            var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+            const alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
             
             // If we have messageAlert and messageText
             if (messageAlert && messageText) {
@@ -304,19 +267,19 @@ function contactform() {
         return false;
     }
  })    
-};
+}
 
 
 /*------------------------------------
   HT ProgressBar
 --------------------------------------*/
   function progressbar () {
-    var progressBar = $('.progress');
+    const progressBar = $('.progress');
     if(progressBar.length) {
       progressBar.each(function () {
-        var Self = $(this);
+        const Self = $(this);
         Self.appear(function () {
-          var progressValue = Self.data('value');
+          const progressValue = Self.data('value');
 
           Self.find('.progress-bar').animate({
             width:progressValue+'%'           
@@ -324,76 +287,46 @@ function contactform() {
         });
       })
     }
-};
-
-
-/*------------------------------------
-  HT Search
---------------------------------------*/
-function search() {
-  if($('.search-form').length)
-    {
-      var searchForm = $('.search-form');
-      var searchInput = $('.search-input');
-      var searchButton = $('.search-button');
-
-      searchButton.on('click', function(event)
-      {
-        event.stopPropagation();
-
-        if(!searchActive)
-        {
-          searchForm.addClass('active');
-          searchActive = true;
-          searchInput.focus();
-
-          $(document).one('click', function closeForm(e)
-          {
-            if($(e.target).hasClass('search-input'))
-            {
-              $(document).one('click', closeForm);
-            }
-            else
-            {
-              searchForm.removeClass('active');
-              searchActive = false;
-            }
-          });
-        }
-        else
-        {
-          searchForm.removeClass('active');
-          searchActive = false;
-        }
-      }); 
-    }
-};
-
-
+}
 /*------------------------------------
   HT Countdown
 --------------------------------------*/
-function startCountdown() {
-    // 7 days from now
-    let finalDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+$('.countdown').each(function () {
 
-    $('.countdown').countdown(finalDate, function (event) {
-        $(this).find('.days').text(event.strftime('%-D'));
-        $(this).find('.hours').text(event.strftime('%H'));
-        $(this).find('.minutes').text(event.strftime('%M'));
-        $(this).find('.seconds').text(event.strftime('%S'));
-    }).on('finish.countdown', function () {
-        // Restart automatically for another 3 days
-        $(this).countdown('remove');
-        startCountdown();
-    });
-}
+    const $counter = $(this);
+
+    function initCountdown() {
+
+        const finalDate = new Date(Date.now() + 5 * 24 * 60 * 60 * 1000);
+
+        $counter
+            .countdown(finalDate)
+            .on('update.countdown', function (event) {
+
+                $counter.find('.days').text(event.strftime('%-D'));
+                $counter.find('.hours').text(event.strftime('%H'));
+                $counter.find('.minutes').text(event.strftime('%M'));
+                $counter.find('.seconds').text(event.strftime('%S'));
+
+            })
+            .on('finish.countdown', function () {
+
+                $counter.countdown('remove');
+                initCountdown();
+
+            });
+
+    }
+
+    initCountdown();
+
+});
 
 /*------------------------------------
   HT Wow Animation
 --------------------------------------*/
 function wowanimation() {
-    var wow = new WOW({
+    const wow = new WOW({
         boxClass: 'wow',
         animateClass: 'animated',
         offset: 0,
@@ -407,23 +340,19 @@ function wowanimation() {
 /*------------------------------------
   HT Window load and functions
 --------------------------------------*/
-$(document).ready(function() {
-    fullScreen(),
-    menu(),
-    owlcarousel(),
-    counter(),
-    testimonialcarousel(),
-    magnificpopup(),
-    scrolltop(),
-    headerheight(),
-    fxheader(),
-    scrolling(),
-    databgcolor(),  
-    contactform(),
-    progressbar(),
-    search(),
-    startCountdown();
-
+$(function () {
+    fullScreen();
+    menu();
+    owlcarousel();
+    counter();
+    testimonialcarousel();
+    scrolltop();
+    headerheight();
+    fxheader();
+    scrolling();
+    databgcolor();
+    contactform();
+    progressbar();
 });
 
 
@@ -433,7 +362,7 @@ $window.resize(function() {
 
 
 $(window).on('load', function() {
-    preloader();
+    // preloader();
     wowanimation();
 });
 //
