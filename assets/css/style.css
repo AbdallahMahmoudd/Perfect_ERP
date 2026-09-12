@@ -130,7 +130,7 @@ section{padding: 80px 0;}
 /* ------------------------
     Countdown
 ------------------------*/
-.countdown{padding-top: 10px; display: flex; align-items: center; justify-content: center;gap: 15px; width: 100%; border-top: 2px dashed rgba(255,255,255,0.5); border-bottom: 2px dashed rgba(255,255,255,0.5);}
+.countdown{padding-top: 10px; display: flex; align-items: center; justify-content: center;gap: 15px; width: 100%}
 .countdown > li{font-weight: 700; text-align: center; list-style-type: none; display: inline-block; width: 80px;padding: 12px; background: var(--color-primary)}
 .countdown > li span{font-size:30px; font-weight:700; line-height:40px; display: block;color: #fff}
 .countdown > li p{font-size:14px; display: block; line-height:20px; margin-bottom: 0; color: #fff}
