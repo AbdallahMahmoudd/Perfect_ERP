@@ -8,6 +8,7 @@
  --color-primary: #3a30c4;
  --color-secondary: #1a75bc;
  --color-dark: #1e1c3c;
+ --color-theme: #2575fc
 }
 .color-primary{
   color: var(--color-primary) !important;
@@ -17,6 +18,9 @@
 }
 .color-dark{
  color: var(--color-dark) !important;
+}
+.color-theme{
+ color: var(--color-theme);
 }
 /* ------------------------
     General
@@ -135,7 +139,7 @@ section{padding: 80px 0;}
 .countdown > li span{font-size:30px; font-weight:700; line-height:40px; display: block;color: #fff}
 .countdown > li p{font-size:14px; display: block; line-height:20px; margin-bottom: 0; color: #fff}
 .coming-soon .subscribe-form{margin: 0 auto;}
-.coming-soon{text-align: center; margin: 0 auto 30px;}
+.coming-soon{text-align: center; margin: 0 auto 70px;}
 
 /* ------------------------
     Terms and Conditions
