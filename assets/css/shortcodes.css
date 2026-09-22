@@ -248,8 +248,8 @@
 ------------------------*/
 .counter{position: relative; text-align: center; background: #ffffff; border-radius: 7px; overflow: hidden; padding: 30px;}
 .counter span{font-size:50px; font-weight:700; line-height:50px; color:#005bea; display: inline-block; margin: 30px 0 10px;}
-.counter span + span{font-weight: normal; font-size: 30px; color: var(--color-dark)}
-.counter h5{display: block; font-weight:normal; color:var(--color-dark); font-size:20px; font-weight: 500; position:relative; margin:0;}
+/*.counter span + span{font-weight: normal; font-size: 30px; color: var(--color-dark)}*/
+.counter h5{display: block; color:var(--color-dark); font-size:20px; font-weight: 500; position:relative; margin:0;}
 
 .counter.style-2{background: none; box-shadow: none; padding: 0; text-align: left;}
 .counter.style-2 span{margin-top: 0;}
@@ -264,6 +264,7 @@
 .counter.style-4:before {background: #fafaff; -webkit-transform: rotate(60deg); transform: rotate(60deg);}
 .counter.style-4:after {background: #ffffff; -webkit-transform: rotate(-60deg); transform: rotate(-60deg);}
 .counter.style-4 .counter-desc{position: relative; z-index: 9; width: 100%;}
+.counter .counter-icon img{max-width: 100px; height: auto; object-fit: contain}
 
 
 /* ------------------------
