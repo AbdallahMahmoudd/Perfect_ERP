@@ -515,6 +515,84 @@
     })))
 }();</script>
 
+<script>
+    $(function () {
+
+        $('#contact-form').on('submit', function (e) {
+
+            // Check if form has validation errors
+            const form = this;
+
+            if (
+                $(form).find('.has-error, .has-danger').length ||
+                $(form).find('[required]').filter(function () {
+                    return !$(this).val().trim();
+                }).length
+            ) {
+                return;
+            }
+
+            e.preventDefault();
+
+            // Get values
+            const name = $('#form_name').val().trim();
+            const lastname = $('#form_lastname').val().trim();
+            const email = $('#form_email').val().trim();
+            const phone = $('#form_phone').val().trim();
+            const company = $('#form_companyName').val().trim();
+            const branches = $('#form_branchesNumber').val().trim();
+            const trucks = $('#form_trucksNumber').val().trim();
+
+            const app = $('#form_selectApp option:selected').text();
+
+            const message = $('#form_message').val().trim();
+
+            // WhatsApp number
+            // Replace with your actual WhatsApp number
+            const whatsappNumber = '2001066070839';
+
+            // WhatsApp message
+            const whatsappMessage =
+                `مرحباً Perfect ERP
+
+أرغب في طلب نسخة تجريبية.
+
+الاسم:
+${name} ${lastname}
+
+ البريد الإلكتروني:
+${email || 'غير متوفر'}
+
+الهاتف:
+${phone}
+
+ اسم الشركة:
+${company || 'غير متوفر'}
+
+ عدد الفروع:
+${branches || 'غير متوفر'}
+
+ عدد الشاحنات:
+${trucks || 'غير متوفر'}
+
+ البرنامج المطلوب:
+${app}
+
+ الرسالة:
+${message || 'لا توجد رسالة'}`;
+
+            // Open WhatsApp
+            const whatsappUrl =
+                'https://wa.me/' +
+                whatsappNumber +
+                '?text=' +
+                encodeURIComponent(whatsappMessage);
+
+            window.open(whatsappUrl, '_blank');
+        });
+
+    });
+</script>
 <!-- inject js end -->
 
 </body>

@@ -251,16 +251,14 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="اسم العائلة" data-error="اسم العائلة مطلوب.">
-                                        <div class="help-block with-errors"></div>
+                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="اسم العائلة">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="بريد إلكتروني للعمل" data-error="يلزم وجود بريد إلكتروني صالح.">
-                                        <div class="help-block with-errors"></div>
+                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="بريد إلكتروني للعمل" >
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -273,22 +271,19 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input id="form_companyName" type="text" name="companyName" class="form-control" placeholder="اسم الشركة" data-error="اسم الشركة مطلوب.">
-                                        <div class="help-block with-errors"></div>
+                                        <input id="form_companyName" type="text" name="companyName" class="form-control" placeholder="اسم الشركة">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input id="form_branchesNumber" type="number" name="branchesNumber" class="form-control" placeholder="عدد الفروع" data-error="عدد الفروع مطلوب.">
-                                        <div class="help-block with-errors"></div>
+                                        <input id="form_branchesNumber" type="number" name="branchesNumber" class="form-control" placeholder="عدد الفروع" >
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input id="form_trucksNumber" type="number" name="trucksNumber" class="form-control" placeholder="عدد الشاحنات" data-error="عدد الشاحنات مطلوب.">
-                                        <div class="help-block with-errors"></div>
+                                        <input id="form_trucksNumber" type="number" name="trucksNumber" class="form-control" placeholder="عدد الشاحنات" >
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -309,8 +304,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea id="form_message" name="message" class="form-control" placeholder="رسالة" rows="4" data-error="يرجى ترك رسالة لنا."></textarea>
-                                        <div class="help-block with-errors"></div>
+                                        <textarea id="form_message" name="message" class="form-control" placeholder="رسالة" rows="4"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12 mt-2 text-end">
@@ -522,6 +516,84 @@
 }();</script>
 
 <!-- inject js end -->
+<script>
+    $(function () {
+
+        $('#contact-form').on('submit', function (e) {
+
+            // Check if form has validation errors
+            const form = this;
+
+            if (
+                $(form).find('.has-error, .has-danger').length ||
+                $(form).find('[required]').filter(function () {
+                    return !$(this).val().trim();
+                }).length
+            ) {
+                return;
+            }
+
+            e.preventDefault();
+
+            // Get values
+            const name = $('#form_name').val().trim();
+            const lastname = $('#form_lastname').val().trim();
+            const email = $('#form_email').val().trim();
+            const phone = $('#form_phone').val().trim();
+            const company = $('#form_companyName').val().trim();
+            const branches = $('#form_branchesNumber').val().trim();
+            const trucks = $('#form_trucksNumber').val().trim();
+
+            const app = $('#form_selectApp option:selected').text();
+
+            const message = $('#form_message').val().trim();
+
+            // WhatsApp number
+            // Replace with your actual WhatsApp number
+            const whatsappNumber = '2001066070839';
+
+            // WhatsApp message
+            const whatsappMessage =
+                `مرحباً Perfect ERP
+
+أرغب في طلب نسخة تجريبية.
+
+الاسم:
+${name} ${lastname}
+
+ البريد الإلكتروني:
+${email || 'غير متوفر'}
+
+الهاتف:
+${phone}
+
+ اسم الشركة:
+${company || 'غير متوفر'}
+
+ عدد الفروع:
+${branches || 'غير متوفر'}
+
+ عدد الشاحنات:
+${trucks || 'غير متوفر'}
+
+ البرنامج المطلوب:
+${app}
+
+ الرسالة:
+${message || 'لا توجد رسالة'}`;
+
+            // Open WhatsApp
+            const whatsappUrl =
+                'https://wa.me/' +
+                whatsappNumber +
+                '?text=' +
+                encodeURIComponent(whatsappMessage);
+
+            window.open(whatsappUrl, '_blank');
+        });
+
+    });
+</script>
 </body>
 
 </html>
